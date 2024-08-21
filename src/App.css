@@ -156,6 +156,11 @@ img {
 .search-list .search-list-item:hover {
   background-color: #1f1f1f;
 }
+
+h3:hover{
+  cursor: pointer;
+}
+
 .search-list-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,12 +176,18 @@ img {
 .search-item-info h3 {
   font-weight: 600;
   font-size: 1rem;
+  color: #fff;
 }
 .search-item-info p {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   font-weight: 600;
   opacity: 0.6;
+  color: #fff;
+}
+
+.search-button{
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 /* thumbnail */
@@ -265,10 +276,12 @@ img {
 .movie-info .language {
   color: var(--orange-color);
   font-style: italic;
+  padding-bottom: 1rem;
 }
 .movie-info .awards {
   font-weight: 300;
   font-size: 0.9rem;
+  padding-bottom: 2rem;
 }
 .movie-info .awards i {
   color: var(--orange-color);
@@ -320,19 +333,20 @@ img {
   }
   .result-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* This makes the results pop up 2 by 2 on the results screen */
+    /* grid-template-columns: repeat(2, 1fr); */
   }
-  .movie-info {
-    text-align: left;
-    padding-top: 0;
-  }
+  /* .movie-info {
+     text-align: left; 
+     padding-top: 0; 
+  } */
   .movie-info .movie-misc-info {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     padding-left: 0;
   }
-  .movie-info .plot {
+  .movie-info {
     margin-left: 0;
   }
   .movie-info .writer {

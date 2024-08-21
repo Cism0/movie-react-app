@@ -1,21 +1,24 @@
 import React from 'react';
 
 const MovieList = ({ movies, onSelectMovie }) => {
-  if (!movies.length) return null; // Render nothing if no movies are available
-
   return (
-    <div className="result-grid">
-      {movies.map((movie, index) => (
-        <div
-          className="movie-info"
-          key={index}
-          onClick={() => onSelectMovie(movie)}
+    <div className="movie-list">
+      {movies.map((movie) => (
+        <div 
+          key={movie.imdbID} 
+          className="search-list-item" 
+          onClick={() => onSelectMovie(movie.imdbID)}
         >
-          <div className="movie-poster">
-            <img src={movie.Poster} alt={movie.Title} />
+          <div className="search-item-thumbnail">
+            <img 
+              src={movie.Poster !== "N/A" ? movie.Poster : "image_not_found.png"} 
+              alt={movie.Title} 
+            />
           </div>
-          <h3>{movie.Title}</h3>
-          <p>{movie.Year}</p>
+          <div className="search-item-info">
+            <h3>{movie.Title}</h3>
+            <p>{movie.Year}</p>
+          </div>
         </div>
       ))}
     </div>

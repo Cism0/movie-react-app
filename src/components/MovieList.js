@@ -2,14 +2,14 @@ import React from 'react';
 
 const MovieList = ({ movies, onSelectMovie }) => {
   return (
-    <div className="movie-list">
+    <div className="result-grid">
       {movies.map((movie) => (
         <div 
           key={movie.imdbID} 
           className="search-list-item" 
           onClick={() => onSelectMovie(movie.imdbID)}
         >
-          <div className="search-item-thumbnail">
+          <div className="search-item-thumbnail font-color-white">
             <img 
               src={movie.Poster !== "N/A" ? movie.Poster : "image_not_found.png"} 
               alt={movie.Title} 

@@ -19,12 +19,12 @@ const SearchBar = ({ onSearch }) => {
           placeholder="Search for movies..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          onKeyUp={handleSearch}
+          // onKeyUp={handleSearch}
         />
         {/* This button is functional, but the keyUp feature is more seemless in my opinion so I choose to keep the button here but not in view. */}
-        {/* <button className="search-button" onClick={handleSearch}>
+        <button className="search-button" onClick={handleSearch}>
           Search
-        </button> */}
+        </button>
       </div>
     </div>
   );

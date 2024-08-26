@@ -168,6 +168,10 @@ h3:hover{
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-width: 1px;
+  border: #fff;
 }
 .search-item-thumbnail img {
   width: 40px;

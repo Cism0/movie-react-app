@@ -162,13 +162,6 @@ img {
   -o-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
 }
-.search-list .search-list-item:hover {
-  background-color: #1f1f1f;
-}
-
-h3:hover {
-  cursor: pointer;
-}
 
 .search-list-item {
   display: -webkit-box;
@@ -177,13 +170,20 @@ h3:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0.5rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
   border-width: 1px;
   border: #fff;
 }
+
+.search-list-item:hover {
+  cursor: pointer;
+  background-color: #1f1f1f;
+}
+
 .search-item-thumbnail img {
-  width: 40px;
+  width: 52px;
   margin-right: 1rem;
 }
 
@@ -199,11 +199,11 @@ h3:hover {
 
 .search-item-info h3 {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #fff;
 }
 .search-item-info p {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   margin-top: 0.5rem;
   font-weight: 600;
   opacity: 0.6;
@@ -254,7 +254,7 @@ h3:hover {
   padding: 3rem 0;
 }
 .result-grid {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .movie-poster img {
   max-width: 300px;
@@ -387,7 +387,7 @@ h3:hover {
   }
   .result-grid {
     display: grid;
-    /* This makes the results pop up 2 by 2 on the results screen */
+    /* This makes the results pop up with 3 columns and 2 rows for the resulting movies so long as there are 3 movies or more to be displayed */
     grid-template-columns: repeat(3, 1fr);
   }
   /* .movie-info {
